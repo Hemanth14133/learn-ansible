@@ -7,7 +7,7 @@
 
 - name: Demo on vars
   hosts: localhost
-  var:
+  vars:
     URL: example.com
   tasks:
     - name: Print a variable
