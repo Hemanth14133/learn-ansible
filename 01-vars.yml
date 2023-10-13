@@ -1,6 +1,16 @@
-- name: Demo on vars
+- name: Demo on Printing
   hosts: localhost
   tasks:
     - name: Print Hello world
       ansible.builtin.debug:
         msg: Hello World
+
+- name: Demo on vars
+  hosts: localhost
+  var:
+    URL: example.com
+  tasks:
+    - name: Print a variable
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+## Given the variable in double quotes, Good to give a variable in double quotes, Because it will fail in some scenarios if quotes are not provided
