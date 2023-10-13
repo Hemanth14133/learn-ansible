@@ -15,3 +15,12 @@
         msg: "{{ URL }}"
 ## Given the variable in double quotes, Good to give a variable in double/single quotes, Because it will fail in some scenarios if quotes are not provided.
 # In the key: value, if the value is just variable or if the values starts with variable then it fail.
+
+- name: Demo on vars
+  hosts: localhost
+  tasks:
+    - name: Print a variable
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+      vars:
+        URL: example.com
